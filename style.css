@@ -35,6 +35,38 @@ header {
 .logo {
   max-width: 320px;
   filter: drop-shadow(0 0 15px #0ff);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: logoAppear 2s ease forwards;
+}
+
+@keyframes logoAppear {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Machine à écrire */
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #0ff;
+  white-space: nowrap;
+  margin: 20px auto;
+  letter-spacing: .1em;
+  animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+  max-width: 90%;
+  font-size: 1.5rem;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #0ff }
 }
 
 /* Titres */
@@ -62,6 +94,17 @@ h2 {
   background: #00a3a3;
   color: #fff;
   box-shadow: 0 0 16px #00fafa, 0 0 32px #00fafa;
+}
+
+/* Pulsation bouton */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+  50% { box-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+  100% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
 }
 
 /* Footer */
