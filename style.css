@@ -1,117 +1,61 @@
-/* Fond animé galaxie */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: radial-gradient(ellipse at bottom, #0d1a26 0%, #000 100%);
-  color: #fff;
+  color: white;
+  background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') no-repeat center center fixed;
+  background-size: cover;
   text-align: center;
-  overflow-x: hidden;
 }
 
-/* Animation étoiles */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
-  animation: moveStars 200s linear infinite;
-  z-index: -1;
-  opacity: 0.6;
-}
-
-@keyframes moveStars {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-1000px, 1000px); }
-}
-
-/* Header et logo */
-header {
-  padding: 20px;
-}
-
-.logo {
-  max-width: 320px;
-  filter: drop-shadow(0 0 15px #0ff);
-  opacity: 0;
-  transform: scale(0.8);
-  animation: logoAppear 2s ease forwards;
-}
-
-@keyframes logoAppear {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Machine à écrire */
-.typewriter {
-  overflow: hidden;
-  border-right: .15em solid #0ff;
-  white-space: nowrap;
+header .logo {
+  max-width: 200px;
   margin: 20px auto;
-  letter-spacing: .1em;
-  animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-  max-width: 90%;
-  font-size: 1.5rem;
+  display: block;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+.links {
+  margin: 20px 0;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #0ff }
-}
-
-/* Titres */
-h2 {
-  color: #0ff;
-  margin-top: 40px;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-}
-
-/* Boutons musique et boutique */
-.links a, .btn {
+.links a {
   display: inline-block;
-  margin: 12px;
-  padding: 14px 28px;
-  color: #000;
-  background: #0ff;
-  text-decoration: none;
-  font-weight: bold;
+  margin: 10px;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.1);
   border-radius: 8px;
-  transition: 0.3s;
-  box-shadow: 0 0 12px #0ff, 0 0 24px #0ff;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
-.links a:hover, .btn:hover {
-  background: #00a3a3;
-  color: #fff;
-  box-shadow: 0 0 16px #00fafa, 0 0 32px #00fafa;
+.links a:hover {
+  background: rgba(255,255,255,0.3);
 }
 
-/* Pulsation bouton */
-.pulse {
-  animation: pulse 2s infinite;
+.player {
+  margin: 30px auto;
+  max-width: 600px;
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
-  50% { box-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
-  100% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+.btn {
+  display: inline-block;
+  margin: 20px;
+  padding: 15px 30px;
+  background: #ff5500;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
 }
 
-/* Footer */
+.btn:hover {
+  background: #ff3300;
+  transform: scale(1.05);
+}
+
 footer {
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 20px;
-  background: rgba(0,0,0,0.6);
-  border-top: 1px solid #0ff;
-  text-shadow: 0 0 5px #0ff;
+  background: rgba(0,0,0,0.5);
 }
