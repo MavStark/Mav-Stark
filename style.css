@@ -1,63 +1,83 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
   background: url('background.png') no-repeat center center fixed;
   background-size: cover;
   text-align: center;
 }
 
+header {
+  padding: 30px 0;
 }
 
-header .logo {
-  max-width: 200px;
-  margin: 20px auto;
-  display: block;
+.logo {
+  max-width: 300px;
+  filter: drop-shadow(0 0 20px #00ffff);
+  animation: fadeIn 2s ease-in-out;
 }
 
-.links {
-  margin: 20px 0;
+h2 {
+  font-size: 2em;
+  text-shadow: 0 0 15px #00ffff;
+  margin-bottom: 20px;
 }
 
 .links a {
   display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 8px;
-  color: white;
+  margin: 10px 15px;
+  padding: 12px 25px;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  border-radius: 30px;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  background: rgba(0,0,0,0.5);
 }
 
 .links a:hover {
-  background: rgba(255,255,255,0.3);
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 20px #00ffff;
 }
 
 .player {
   margin: 30px auto;
   max-width: 600px;
+  border: 2px solid rgba(0,255,255,0.6);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,255,255,0.8);
 }
 
-.btn {
+.shop .btn {
   display: inline-block;
-  margin: 20px;
-  padding: 15px 30px;
-  background: #ff5500;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
+  margin-top: 15px;
+  padding: 12px 30px;
+  color: #fff;
+  border: 2px solid #ff00ff;
+  border-radius: 30px;
+  background: rgba(0,0,0,0.6);
   font-weight: bold;
-  transition: transform 0.3s, background 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background: #ff3300;
-  transform: scale(1.05);
+.shop .btn:hover {
+  background: #ff00ff;
+  color: #000;
+  box-shadow: 0 0 20px #ff00ff;
 }
 
 footer {
   margin-top: 40px;
   padding: 20px;
-  background: rgba(0,0,0,0.5);
+  font-size: 0.9em;
+  background: rgba(0,0,0,0.7);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
